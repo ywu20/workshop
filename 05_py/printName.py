@@ -9,7 +9,7 @@ def findName(arr):
     length = len(arr)
 
     #generate random number
-    index = int(random.random() * length)
+    index = random.randint(0,len(arr)-1); #randint is inclusive both sides
 
     print(arr[index])
 
