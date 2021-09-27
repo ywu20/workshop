@@ -1,7 +1,7 @@
-#Yuqing Wu
+#Yuqing Wu, Shadman Rakib, Cameron Nelson
 #Softdev
-#classwork -- print random names
-#2021-09-22
+#classwork -- print random names fix by collaborating with trio
+#2021-09-26
 import random
 
 #function to print random name in arr.
