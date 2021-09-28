@@ -8,13 +8,13 @@ import random
 
 #create a dictionary for the csv file
 occupations = {}
-
-def select_occupations():
+tst = {}
+def select_occupations(rand):
     for key, value in occupations.items():
-        random -= value
-        if(random <=0):
-            print(key)
-            break
+        rand -= value
+        if(rand <=0):
+            return key
+
 
 def main():
 
@@ -28,8 +28,17 @@ def main():
                 occupations[row[0]] = float (row[1])
 
 
-    random = random.uniform(0,occupations['Total'])
+    rand = random.uniform(0,occupations['Total'])
     del occupations['Total']
-    select_occupations()
-    
-main()
+    return select_occupations(rand)
+
+def test():
+    main()
+    for i in range(10000):
+        a = main()
+        try:
+            tst[a] +=1
+        except:
+            tst[a]=1
+    print(tst)
+test()
