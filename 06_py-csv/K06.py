@@ -16,11 +16,10 @@ with open('occupations.csv') as csv_file:
             occupations[row[0]] = float (row[1])
 
 
-random = random.uniform(0.0,occupations['Total'])
-
+random = random.uniform(0,occupations['Total'])
 del occupations['Total']
-print(occupations.keys())
-
-
-print(occupations)
-print(random)
+for key, value in occupations.items():
+    random -= value
+    if(random <=0):
+        print(key)
+        break
