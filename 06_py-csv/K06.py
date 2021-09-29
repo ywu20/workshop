@@ -1,7 +1,15 @@
 #Team Polar - Jesse Xie, Rachel Xiao, Yuqing Wu
 #SoftDev
-#K06: StI/O: Divine your Destiny!
+#K06 -- StI/O: Divine your Destiny!
 #2021-09-28
+
+#Discoveries:
+#Although we didn't use it in our code, we discovered random.choice which can be used for weighted randomness.
+#How to use csv to read files and split it with csv.reader.
+#Refamiliarize myself with how to do things with the dictionary.
+#The first time we thought about the algorithm we were thinking of accumulating the percentage to make each number
+#range represent an occupation. However, that would require extra work to indicate which section belongs to which
+#occupation. Sometimes, subtration can be a lot neater than addition.
 
 import csv
 import random
