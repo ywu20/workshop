@@ -1,2 +1,9 @@
 Yuqing Wu, Annabel Zhang, Alif Abdullah, Roshani Shrestha
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity
+2021-09-30
 
+- Annabel's trio uses csv.DictReader to read the csv file into a dictionary.
+- Most people generate a random number and tries to subtract /  add the weighted percentage until it meets the random number. Other people convert the dictionary's weight into a list and use random.choice to do the weighted percentage.
+- Yusuf suggested to use binary search to improve performance.
+ 
