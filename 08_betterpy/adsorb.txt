@@ -7,7 +7,19 @@ Questions:
 Out of everyone’s approach to weightedly generate a random occupation, which is the fastest and most efficient?
 
 Comments:
-It is interesting to see how many different ways were used to obtain a random weighted occupation in K06. For example, Alif’s trio used `random.randint()` and compared the resulting value with the percentages in the dictionary. Roshani’s trio and Qina’s trio both used `random.choices()` and put in lists of values (the occupations) and lists weights as arguments. Yuqing’s trio used `random.uniform()` to obtain a number between 0 and the total percentage. Annabel’s and Han’s trio both used `random.random()` and multiplied the resulting value by the total percentage. Overall, most people generated a random number and tried to subtract / add the weighted percentage until it met the random number. We also noticed that a lot of people used `csv.DictReader()` to convert the contents of the csv file into a dictionary. There were others, however, who took a longer route. Qina’s trio read each line of the csv file, converted each entry into a list and then added each list to another list. This list was then converted to a dictionary. Andy’s trio took special care to keep track of the position of commas relative to quotes, and separated job titles from percentages with that information in mind. They are two very different ways to create the same dictionary.
+It is interesting to see how many different ways were used to obtain a random weighted occupation in K06.
+For example, Alif’s trio used `random.randint()` and compared the resulting value with the percentages in
+the dictionary. Roshani’s trio and Qina’s trio both used `random.choices()` and put in lists of values
+(the occupations) and lists weights as arguments. Yuqing’s trio used `random.uniform()` to obtain a number
+between 0 and the total percentage. Annabel’s and Han’s trio both used `random.random()` and multiplied the
+resulting value by the total percentage. Overall, most people generated a random number and tried to
+subtract / add the weighted percentage until it met the random number. We also noticed that a lot of people
+used `csv.DictReader()` to convert the contents of the csv file into a dictionary. There were others,
+however, who took a longer route. Qina’s trio read each line of the csv file, converted each entry into
+a list and then added each list to another list. This list was then converted to a dictionary. Andy’s
+trio took special care to keep track of the position of commas relative to quotes, and separated job
+titles from percentages with that information in mind. They are two very different ways to create the
+same dictionary.
 
 Concerns:
 Some of these methods may not be as efficient as other methods.
