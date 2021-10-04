@@ -1,0 +1,59 @@
+Team W (Liesel W. [Ducky's Name is King Hagrid] Jonathan W. [Ducky's Name is Loki], Yuqing W. [Ducky's Name is Zero])
+SoftDev
+K09 -- Simple Path to Greatness
+
+Q0: Where have you seen similar syntax in other langs?
+This looks similar to creating an object in other language with
+a constructor. When you initialize an object in Java, the general
+syntax is type <name> = new type(v1...). This is similar to the
+code we have here because it seems like we're creating an object
+in Flask called "app" in similar syntax.
+
+Q1: What points of reference do you have for meaning of '/'?
+When we mean '/' in that context, we're redirecting the user
+to another place within the app. We believe this line of
+code specifically represents a url ending with '/' only.
+This is because, URLS (ex: / vs /cupcake) indicates a
+different part of a webpage or app. We know this to be true
+because of @app.route. This tells the app to route somewhere
+else, in this case: '/'.
+
+Q2: Where will this print to? Q3: What will it print?
+It will print "__main__" in the terminal (or the console where
+the python script runs)
+
+Q3: Will this appear anywhere? How u know?
+The no hablo queso part will probably appear in the webpage
+because it is returned which means it doesn't print to the
+terminal, and there's no other place it will go. After we run
+the program, it proves that our initial guess is right and it
+does goes to the webpage.
+
+Q4: Where have you seen similar construcs in other languages?
+It looks like in object oriented programming when the object
+calls one of its method. Run() is a method for a Flask object
+and it will run everything written in the python script and
+put them to the webpage.
+
+Discoveries:
+- The server is a development server.
+- The debug mode says off which means there's  a way to toggle it
+and something can be done to debug the webpage.
+- It always runs on http://127.0.0.1:5000/
+- 127.0.0.1 seems to be a special IP address that always pop up after
+a request is sent to the server.
+- the GET part might be appearing because we are getting the returned
+value from the web server. If we are inputing to the website then
+that part might be different.
+- Every time you load/reload the website a new line would pop up.
+The part that is  included in the print statement would be printed
+to the terminal.
+- Closing the tab of the webpage doesn't exit the program.
+- If you change the @app.route to another path and enter it into them
+bar, you can let the program put other things on the webpage by changing
+what it returns.
+- If you have two functions under same route, it would only run the first
+one, or at least that's what seems like to be happening.
+- If you have an error in your function, it is a runtime error and won't
+happen as long as you don't go to the site that runs the function. It
+seems like the codes that are not used are not compiled, unlike java.
