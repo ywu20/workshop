@@ -57,3 +57,4 @@ one, or at least that's what seems like to be happening.
 - If you have an error in your function, it is a runtime error and won't
 happen as long as you don't go to the site that runs the function. It
 seems like the codes that are not used are not compiled, unlike java.
+- The route input must start with a /, can't put anything before that.
