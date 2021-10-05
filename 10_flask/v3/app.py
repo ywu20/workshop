@@ -9,7 +9,7 @@ app = Flask(__name__) #create instance of class Flask
 @app.route("/")       #assign fxn to route
 def hello_world():
     print("about to print __name__...")
-    pri(__name__)   #where will this go?
+    print(__name__)   #where will this go?
     return "No hablo queso!"
 
 
@@ -41,6 +41,8 @@ app.run()
 # When there's an error in the code that's run, with a debugger,
 # it would specify the error on the website and gives more information
 # about the error with the Werkzeug powered traceback interpreter.
+# When you click traceback in the website, you can see the same thing
+# as what is printed in the terminal.
 # In the terminal, the error is also printed with the line of the error and the error.
 # The traceback is also printed.
 # pri(__name__)   #where will this go?
