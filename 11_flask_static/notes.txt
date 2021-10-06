@@ -19,3 +19,5 @@ show up in the website while foo would not.
  The reason why it behaves differently than foo is because the how the
  content of the file is in page source and if you have html there you
  you would get the text to display on the website.
+ - We also discovered that when you change the file extension to .txt
+ content of the file would be displayed on the website. 
