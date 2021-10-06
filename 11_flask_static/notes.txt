@@ -20,4 +20,5 @@ show up in the website while foo would not.
  content of the file is in page source and if you have html there you
  you would get the text to display on the website.
  - We also discovered that when you change the file extension to .txt
- content of the file would be displayed on the website. 
+ content of the file would be displayed on the website. The site seems
+ to respond differently to different file extensions.
