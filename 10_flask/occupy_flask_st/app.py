@@ -17,7 +17,7 @@ def hello_world():
     2021-10-04 <br/><br/>'''
 
 #apparently the problem goes away if we use dictionary.keys() instead of a list
-    return ""+heading+K06.main() + "<br/>\n<br/>"+str(K06.occupations.keys())[10:-1]
+    return heading+K06.main() + "<br/>\n<br/>"+ str(K06.jobs)#str(K06.occupations.keys())[10:-1]
 
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change

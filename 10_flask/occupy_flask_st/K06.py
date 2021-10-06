@@ -18,7 +18,7 @@ import random
 occupations = {}
 tst = {}
 
-keys = []
+jobs = []
 percentages = []
 
 #choose an occupation with weighted percentage
@@ -35,17 +35,17 @@ percentages = []
     #    if(rand <=0):
     #        return key
 
-
+with open('occupations.csv') as csv_file:
+    #reads the csv file and splits by the ','
+    reader = csv.reader(csv_file, delimiter=',')
+    #puts the csv file in a dictionary with the string part as the key and the percent part as value
+    for row in reader:
+        if row[0] != "Job Class" and row [0] != "Total":
+            occupations[row[0]] = float (row[1])
+            jobs.append(row[0])
+            percentages.append(float(row[1]))
 def main():
-    with open('occupations.csv') as csv_file:
-        #reads the csv file and splits by the ','
-        reader = csv.reader(csv_file, delimiter=',')
-        #puts the csv file in a dictionary with the string part as the key and the percent part as value
-        for row in reader:
-            if(row[0] != "Job Class" and row [0] != "Total"):
-                occupations[row[0]] = float (row[1])
-                keys.append(row[0])
-                percentages.append(float(row[1]))
+
 
     #Generate a random double from 0 to 99.8
     #rand = random.uniform(0,occupations['Total'])
@@ -54,9 +54,10 @@ def main():
     #del occupations['Total']
 
     #return the occupation chosen with weighted percentage
+
     #my groupmates want to use random.choices instead after looking around other people's code
 
-    return random.choices(keys, weights=percentages, k = 1)[0]
+    return random.choices(jobs, weights=percentages, k = 1)[0]
 
 #a very simple tester
 def test():
