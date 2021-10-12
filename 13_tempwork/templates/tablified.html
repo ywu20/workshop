@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+ Neon Duckies -- Yuqing Wu, Sophie Liu, Hebe Huang
+ SoftDev
+ K13 - Template for Success
+ 2021-10-08
+ -->
+
+<html>
+
+  <head>
+    <title> {{ foo }} </title>
+  </head>
+
+  <body>
+    <h2> Neon Duckies -- Yuqing Wu, Sophie Liu, Hebe Huang </h2>
+    <h2> SoftDev </h2>
+    <h2>K13 - Template for Success</h2>
+    <h2>2021-10-08</h2>
+    Random Weighted Job: {{random_job}}
+    <table> <tr> <th> Job </th> <th> Percentage </th> </tr>
+    {% for key in collection %}
+    <tr>
+     <td>{{ key }} </td>
+      <td> {{collection[key]}}</td>
+      </tr>
+    {% endfor %}
+    </table>
+  </body>
+
+</html>
