@@ -16,6 +16,10 @@ def hello_world():
     return ""
 
 def select_occupations(rand):
+    """
+    Takes a random number as input, returns the weighted randomly selected occupation
+
+    """
     for key, value in occupations.items():
         #As the dictionary is being looped through, each time the random value generated would subtract
         #the percentage of the occupations. This is kind of like designating areas where the random number
@@ -30,9 +34,12 @@ def select_occupations(rand):
 
 @app.route("/occupyflaskst")
 def test_tmplt():
+    """
+    reads the csv file, renders template and print randomly selcted occupation and
+    occupations with different percentages formatted in a table in the template file.
 
-#choose an occupation with weighted percentage
-
+    """
+    #choose an occupation with weighted percentage
     with open('data/occupations.csv') as csv_file:
         #reads the csv file and splits by the ','
         reader = csv.reader(csv_file, delimiter=',')

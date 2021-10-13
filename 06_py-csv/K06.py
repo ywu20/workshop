@@ -18,6 +18,7 @@ import random
 occupations = {}
 tst = {}
 
+keys = []
 #choose an occupation with weighted percentage
 def select_occupations(rand):
     for key, value in occupations.items():
@@ -41,12 +42,14 @@ def main():
         for row in reader:
             if(row[0] == "Job Class") == False :
                 occupations[row[0]] = float (row[1])
+                keys.append(row[0])
 
     #Generate a random double from 0 to 99.8
     rand = random.uniform(0,occupations['Total'])
 
     #delete 'Total' from dictionary so it will never output 'Total'
     del occupations['Total']
+    keys.remove('Total')
 
     #return the occupation chosen with weighted percentage
     return select_occupations(rand)
@@ -66,4 +69,4 @@ def test():
             tst[a]=1
     print(tst)
 
-print(main())
+#print(main())
