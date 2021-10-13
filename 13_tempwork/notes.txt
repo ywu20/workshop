@@ -1,0 +1,26 @@
+Neon Duckies -- Yuqing Wu, Sophie Liu, Hebe Huang
+SoftDev
+K13 - Template for Success
+2021-10-08
+
+- We decided to let the "/" page return an empty string instead of just not putting it there
+because that would cause a not found error.
+- We think generating our random jobs with random number instead of random.choices might be
+better because we feel like it might be kind of bad to copy dictionary into list. However,
+we are not sure about this.
+
+EGO:
+- When I read the parts about the how some managers ask the programmers to show their error each
+day, I just found it really awkward and pointless. Instead I feel like they should make the
+environment more comfortable for people to fail so that they won't be so afraid of failure
+and consider criticisms in their programs as criticisms toward themselves.
+- Usually I don't really think my code as part of myself and am pretty open to new corrections
+with regards to my code, however, that is when I see the other person's solution as a better
+solution. When I feel like both ways would work or my solution is better, I would try to
+defend the way I do things and can get frustrated at times.
+- It's interesting to see how people tend to see group effort as the sum of
+what each person contributes to the group present days, instead of being
+more than the sum of its parts.
+- The concept of programming in a group is about finding the people you are comfortable
+being stupid in front of. The people who have this ego in their program are the people who
+can't find this group.
