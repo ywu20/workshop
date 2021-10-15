@@ -1,0 +1,24 @@
+Team F^2: Michael Borczuk, Yuqing Wu, David Chong
+SoftDev
+K14 - Form and Function
+2021-10-14
+
+Predictions
+
+We see that we import render_template, which obviously shows that we are using templates.  We
+also see that there is a new import called request, which will probably be used to request
+information from the user.  The app route is a /, so when opening the page at first, the function 
+disp_loginpage() will display in the terminal.  It'll print the name of the flask app, the request,
+the request arguments, and the headers of the request.  We predict that the request.args will be in 
+a dictionary because of the comments below, but we are unsure what headers and request would be.
+
+For the second function, authenticate, we predict that everything will most likely print the same
+way, as the code is the same.  However, it returns "Waaaa hooo HAAAH", which is different from the 
+disp_loginpage function, which returned render_template('login.html');
+
+Observations
+
+We see when running the file that many of our predictions were correct.  Some notable things are that
+the second function is for after you submit your query, and the input is stored in the dictionary as expected.
+There are many random things that are printed that we don't quite understand, but it also prints the url and 
+we believe the ip address of the computer that is logging in.
