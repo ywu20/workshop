@@ -52,11 +52,11 @@ def authenticate():
     print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return render_template('response.html', header=request.args['username'], req=request)
+    return render_template('response.html', name=request.args['username'], req=request.method)
 
 
-    
+
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
-    app.debug = True 
+    app.debug = True
     app.run()
