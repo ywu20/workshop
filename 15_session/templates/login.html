@@ -38,10 +38,12 @@
     </h3>
     <form action="/auth"> <!-- go to /auth -->
       username: <input type="text" name="username"> <br/>
-      password: <input type="password" name="password"> <br/> <br/>
+      password: <input type="password" name="password"> <br/> 
+      {{error_message}}<br/><br/>
       <input type="submit" value="Login" name="sub1">
     </form>
     <br>
+    
   </body>
 
 </html>
