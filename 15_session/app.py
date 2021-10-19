@@ -37,7 +37,7 @@ def disp_loginpage():
     # print(request.args['username']) -- does NOT work - this has not been defined yet - causes error
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return render_template( 'login.html' )
+    return render_template( 'login.html')
 
 
 @app.route("/auth") # , methods=['GET', 'POST'])
@@ -53,6 +53,13 @@ def authenticate():
     print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
+    error = ""
+    if(request.args['username'] != "fsquared"):
+        error = "Error, User Not Found"
+        return render_template( 'login.html', error_message = error) 
+    elif(request.args['password'] != "isthebest"):
+        error = "Error, Username and Password Do Not Match"
+        return render_template( 'login.html', error_message = error)    
     return render_template('response.html', name=request.args['username'], req=request.method)
 
 
