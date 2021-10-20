@@ -1,8 +1,7 @@
-
 # Team F^2: Michael Borczuk, Yuqing Wu, David Chong
 # SoftDev
 # K15 -- Sessions Greetings
-# 2021-10-18
+# 2021-10-19
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -14,18 +13,6 @@ from os import urandom
 
 app = Flask(__name__)    #create Flask object
 app.secret_key = urandom(32) #generates random key
-
-'''
-trioTASK:
-~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
-...read for understanding all of the code below.
-Some will work as written; other sections will not. Can you predict which?
-Devise some simple tests you can run to "take apart this engine," as it were.
-Execute your tests. Process results.
-PROTIP: Insert your own in-line comments wherever they will help your future self and/or current teammates understand what is going on.
-'''
-# TODO - add conditional to determine whether to use request.args or request.form
-
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
     print("\n\n\n")
@@ -39,11 +26,17 @@ def disp_loginpage():
     # print(request.args['username']) -- does NOT work - this has not been defined yet - causes error
     print("***DIAG: request.headers ***")
     print(request.headers)
-    session["login"] = False
-    if("sub2" in request.args): # sub2 is added to request.args when the user has logged out, so we can check if it exists to determine whether to end the session or not
+    # checks for request method and gets the input
+    data = []
+    if(request.method == "GET"):
+        data = request.args
+    else:
+        data = request.form
+    if("sub2" in data): # sub2 is added to request.args when the user has logged out, so we can check if it exists to determine whether to end the session or not
         session["login"] = False # end session
-    if(session["login"] != False): # if not false, the value of session["login"] is the username of the logged in user
-        return render_template('response.html', name=session["login"], req=request.method) # if session still exists go straight to login page
+    if("login" in session):
+        if(session["login"] != False): # if not false, the value of session["login"] is the username of the logged in user
+            return render_template('response.html', name=session["login"], req=request.method) # if session still exists go straight to login page
     return render_template( 'login.html') # otherwise render login page
 
 
