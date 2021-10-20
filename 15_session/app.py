@@ -63,8 +63,10 @@ def authenticate():
 
 
     #should work but I don't know how to change the request type so it's not thoroughly tested
-    name_input = ""
-    pass_input = ""
+    name_input = "" #username input
+    pass_input = "" #password input
+
+    # checks for request method and gets the input
     if(request.method == "GET"):
         name_input = request.args['username']
         pass_input = request.args['password']
@@ -72,11 +74,16 @@ def authenticate():
         name_input = request.form['username']
         pass_input = request.form['password']
 
-    error = ""
+
+    error = "" # the error message
+
+    # a try catch block in case anything unexpected happens
     try:
+        #check to see if the login is correct first, because the login should default to incorrect
         if(name_input == "fsquared" and pass_input == "isthebest"):
-            return render_template('response.html', name=name_input, req=request.method) # render welcome page
             session["login"] = name_input # set session to the username
+            return render_template('response.html', name=name_input, req=request.method) # render welcome page
+
         if(name_input != "fsquared"): # username is wrong
             error = "Error, User Not Found"
         elif(pass_input != "isthebest"): #password is wrong
