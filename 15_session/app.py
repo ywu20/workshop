@@ -1,8 +1,8 @@
 
 # Team F^2: Michael Borczuk, Yuqing Wu, David Chong
 # SoftDev
-# K14 -- Form and Function
-# 2021-10-14
+# K15 -- Sessions Greetings
+# 2021-10-18
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
