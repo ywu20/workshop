@@ -33,8 +33,8 @@ def disp_loginpage():
     print(app)
     print("***DIAG: request obj ***")
     print(request)
-    print("***DIAG: request.args ***")
-    print(request.args)
+    # print("***DIAG: request.args ***")
+    # print(request.args)
     # print("***DIAG: request.args['username']  ***")
     # print(request.args['username']) -- does NOT work - this has not been defined yet - causes error
     print("***DIAG: request.headers ***")
@@ -56,18 +56,30 @@ def authenticate():
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
-    print("***DIAG: request.args['username']  ***")
-    print(request.args['username'])
+    #print("***DIAG: request.args['username']  ***")
+    #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
+
+
+    #should work but I don't know how to change the request type so it's not thoroughly tested
+    name_input = ""
+    pass_input = ""
+    if(request.method == "GET"):
+        name_input = request.args['username']
+        pass_input = request.args['password']
+    else:
+        name_input = request.form['username']
+        pass_input = request.form['password']
+
     error = ""
     try:
-        if(request.args['username'] == "fsquared" and request.args['password'] == "isthebest"):
-            return render_template('response.html', name=request.args['username'], req=request.method) # render welcome page
-            session["login"] = request.args['username'] # set session to the username
-        if(request.args['username'] != "fsquared"): # username is wrong
+        if(name_input == "fsquared" and pass_input == "isthebest"):
+            return render_template('response.html', name=name_input, req=request.method) # render welcome page
+            session["login"] = name_input # set session to the username
+        if(name_input != "fsquared"): # username is wrong
             error = "Error, User Not Found"
-        elif(request.args['password'] != "isthebest"): #password is wrong
+        elif(pass_input != "isthebest"): #password is wrong
             error = "Error, Username and Password Do Not Match"
         else:
             error = "Error"
