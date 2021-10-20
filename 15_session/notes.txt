@@ -1,0 +1,12 @@
+
+Team F^2: Michael Borczuk, Yuqing Wu, David Chong
+SoftDev
+K14 -- Form and Function
+2021-10-14
+
+Observation from console for 14
+- In console there's error method about not finding the icon. 
+- In the network section there's similar information with what's being printed in the console by flask everytime we reload. 
+- We can see how the program uses memory in the memory section by taking a snapshot
+- Inspector allow us to mess around with the html on the site. 
+
