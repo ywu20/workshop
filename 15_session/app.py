@@ -13,7 +13,7 @@ from flask import session           #allow for session creation/maintenance
 #from flask import Flask, render_template, request
 
 app = Flask(__name__)    #create Flask object
-app.secret_key = "avaxeluyap"
+app.secret_key = urandom(32) #generates random key
 
 '''
 trioTASK:
