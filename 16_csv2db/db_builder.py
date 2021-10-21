@@ -14,23 +14,29 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
+#creates the tables
+command = "create table students (name TEXT, age INTEGER, id INTEGER)"
+c.execute(command)
+command = "create table courses (name TEXT, age INTEGER, id INTEGER)"
+c.execute(command)
+
 with open('students.csv') as students:
-    reader = csv.DictReader(students)
-    #print(list(reader))
-    command = "create table students (name TEXT, age INTEGER, id INTEGER)"
-    c.execute(command)
-    for i in reader:
-        #print(i['name'], i['age'],i['id'])
-        #print(i)
+    student_dict = csv.DictReader(students) # opens the file as a collection of dictionaries
 
-# < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
+    #add each field to the database
+    for i in student_dict:
 
-
-
-        command = "insert into students values(?,?,?)"
-                        # test SQL stmt in sqlite3 shell, save as string
+        command = "insert into students values(?,?,?)" # test SQL stmt in sqlite3 shell, save as string
         c.execute(command, (i['name'], i['age'],i['id']))    # run SQL statement
 
+with open('courses.csv') as courses:
+    course_dict = csv.DictReader(courses) # opens the file as a collection of dictionaries
+
+    #add each field to the database
+    for i in course_dict:
+
+        command = "insert into courses values(?,?,?)" # test SQL stmt in sqlite3 shell, save as string
+        c.execute(command, (i['code'], i['mark'],i['id']))    # run SQL statement
 #==========================================================
 
 db.commit() #save changes
