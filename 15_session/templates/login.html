@@ -36,7 +36,7 @@
     <h3>
       Enter your username and password below to proceed.
     </h3>
-    <form action="/auth"> <!-- go to /auth -->
+    <form action="/auth" method = 'POST'> <!-- go to /auth -->
       username: <input type="text" name="username"> <br/>
       password: <input type="password" name="password"> <br/>
       {{error_message}}<br/><br/>
