@@ -1,5 +1,5 @@
 #Clyde "Thluffy" Sinclair
-#SoftDev  
+#SoftDev
 #skeleton/stub :: SQLITE3 BASICS
 #Dec 2020 -- The Time of the Rona
 
@@ -14,16 +14,24 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
+with open('students.csv') as students:
+    reader = csv.DictReader(students)
+    #print(list(reader))
+    command = "create table students (name TEXT, age INTEGER, id INTEGER)"
+    c.execute(command)
+    for i in reader:
+        #print(i['name'], i['age'],i['id'])
+        #print(i)
 
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+
+        command = "insert into students values(?,?,?)"
+                        # test SQL stmt in sqlite3 shell, save as string
+        c.execute(command, (i['name'], i['age'],i['id']))    # run SQL statement
 
 #==========================================================
 
 db.commit() #save changes
 db.close()  #close database
-
-
