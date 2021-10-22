@@ -6,15 +6,15 @@
 
 #### SQL (Structured Query Language)
 * Standard language designed to work with relational dbs.
- 
+
 used for many major db programs, though implementations
  may not (mostly are not) be compatible.
 
 eg, some implementations:
-MySQL, PostgreSQL, SQLite, Oracle, IBM DB2, Sybase, M$ Access, ... 
+MySQL, PostgreSQL, SQLite, Oracle, IBM DB2, Sybase, M$ Access, ...
 
 
-#### SQLite 
+#### SQLite
 * SQL implementation that relies entirely on function calls in the parent program. (no db server)
 * All db info stored in a single file.
 * Data is dynamically typed as values are inserted.
@@ -24,13 +24,13 @@ MySQL, PostgreSQL, SQLite, Oracle, IBM DB2, Sybase, M$ Access, ...
 * data types: TEXT, INTEGER, REAL, NUMERIC, BLOB
 * NUMERIC will default to an integer, but can be a floating point.
 * BLOB means no suggested type.
-* Columns can be given a PRIMARY KEY attribute, denoting that every entry in that column is unique and cannot be NULL. 
+* Columns can be given a PRIMARY KEY attribute, denoting that every entry in that column is unique and cannot be NULL.
 * Columns can be given a NOT NULL attribute, denoting that no entry can be NULL.
 
 #### Basic SQLite Operations:
 
 `CREATE TABLE`
-  Add a table to a database 
+  Add a table to a database
 eg,   
 `CREATE TABLE <name> (<column name> <data type>, ...)`
 
@@ -40,7 +40,7 @@ Insert a record into a table.
 eg,
 `INSERT INTO <tbl_name> VALUES ( <field 1>, <field 2> ...)`
 Will add a record to a table matching the values to the columns in order.
-    
+
 `NULL` can be used in any entry
 
 eg,
@@ -88,8 +88,8 @@ $ sqlite3 <dbfilename>
 * N: some useful SQLite shell commands:
 ```
   .quit
-  .tables
-  .header on|off
+  .tables shows the tables that we made in the database
+  .header on|off, turns on the header puts the table's headers (keys of the dictionary) on when we try to select from it would print the header.
   .mode column|csv|list|html|insert|line|tabs
   .help
 ```
@@ -99,7 +99,7 @@ $ sqlite3 <dbfilename>
 import sqlite3 #enable SQLite operations
 
 #open db if exists, otherwise create
-db = sqlite3.connect("foo") 
+db = sqlite3.connect("foo")
 
 c = db.cursor() #facilitate db ops
 
