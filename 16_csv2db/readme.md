@@ -88,8 +88,8 @@ $ sqlite3 <dbfilename>
 * N: some useful SQLite shell commands:
 ```
   .quit
-  .tables shows the tables that we made in the database
-  .header on|off, turns on the header puts the table's headers (keys of the dictionary) on when we try to select from it would print the header.
+  .tables
+  .header on|off
   .mode column|csv|list|html|insert|line|tabs
   .help
 ```
