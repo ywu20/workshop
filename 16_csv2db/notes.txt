@@ -1,0 +1,78 @@
+#### Basic SQLite Operations:
+
+`CREATE TABLE`
+  Add a table to a database
+eg,
+`CREATE TABLE <name> (<column name> <data type>, ...)`
+
+`INSERT INTO`
+Insert a record into a table.
+
+eg,
+`INSERT INTO <tbl_name> VALUES ( <field 1>, <field 2> ...)`
+Will add a record to a table matching the values to the columns in order.
+
+`NULL` can be used in any entry
+ In python script, if the fields are variables can be put ? as placeholders in the VALUES
+ section, and then pass as parameters in .execute.
+
+eg,
+```
+CREATE TABLE tpotusa (name TEXT, id INTEGER PRIMARY KEY);
+INSERT INTO tpotusa VALUES ("basitar", 2);
+INSERT INTO tpotusa VALUES ("guitbass", 1);
+INSERT INTO tpotusa VALUES ("drums", 0);
+```
+
+
+eg,
+```
+CREATE TABLE amunals (name TEXT, id INTEGER PRIMARY KEY);
+INSERT INTO amunals VALUES ("whose-it", 2);
+INSERT INTO amunals VALUES ("whats-it", 1);
+INSERT INTO amunals VALUES ("blurb", 0);
+```
+
+
+```
+SELECT * FROM <tbl_name>;
+```
+   Show all fields for each entry (record) in table tbl_name
+
+eg,
+```
+SELECT * FROM tpotusa;
+SELECT name FROM tpotusa; would show just the entries with name key.
+```
+
+eg,
+```
+SELECT name FROM tpotusa WHERE id = 0; would show entries with name key and with id 0
+```
+
+
+__SQLite shell is your friend.__
+* Use like IDLE or Python shell to interact live, test, etc.
+
+```
+$ sqlite3 <dbfilename> starts the shell and opens dbfile
+```
+* N: shell cmds begin with a dot
+* N: some useful SQLite shell commands:
+```
+  .quit quits the shell
+  .tables shows the tables that we made in the database
+  .header on|off,
+      turns on the header puts the table's
+      headers (keys of the dictionary) on when we try
+      to select from it would print the header.
+  .mode column|csv|list|html|insert|line|tabs
+      puts the format into those different modes
+      when we do select from later.
+  .help
+      a short manual for all the sqlite3 shell cmds.
+
+CSV DictReader
+  Makes a collection of dictionary. Can loop through and
+  each element would be a dictionary with default keys being
+  the first row of the csv file. 
