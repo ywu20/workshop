@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Yuqing Wu
+       SoftDev pd2
+       K18 -- CSS basics
+       2021-11-22
+
+	 WORK FILE for CSS
+    -->
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>foo title</title>
+  </head>
+
+  <style>
+  .arial{
+    font-family : "arial";
+  }
+
+  #white-text{
+    color:white;
+  }
+  #dimgray{
+    background-color:dimgray;
+
+  }
+  #darkgray{
+    background-color:darkgray;
+      height:250px;
+  }
+  .foo-head1{
+    background-color:lightgray;
+    color:white;
+    text-align:center;
+  }
+  #no-bullet{
+    list-style: none;
+    color:white;
+    text-decoration: none;
+  }
+  .center{
+    text-align:center;
+  }
+  .nav-foo{
+    position:relative;
+    left:40px;
+  }
+
+  .main-foo{
+    position:absolute;
+    left:300px;
+    top:60px;
+  }
+  .cp-right{
+    position:absolute;
+    right:30px;
+    top:200px;
+    color:darkgray;
+  }
+  .cp-right::before{
+    content:"\a\a\a\a\a";
+    white-space:pre;
+  }
+  </style>
+  <body id = "dimgray">
+
+    <div class = "arial" >
+<div id = "darkgray">
+    <h1 class = "foo-head1">foo heading 1</h1>
+    <h3 class = "nav-foo">nav foo</h3>
+    <ul id = "no-bullet">
+      <li><a href="" id = "no-bullet">dis</a></li>
+      <li><a href=""id = "no-bullet">dat</a></li>
+      <li><a href=""id = "no-bullet">de udda ting</a></li>
+    </ul>
+    <div class = "main-foo">
+    <h2>main foo heading</h2>
+    <p>tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      <br>
+      <br>
+</div>
+</div>
+<div class = "cp-right">
+      Copyright &copy; 2021 Clyde "Thluffy" Sinclair
+    </div>
+
+</div>
+  </body>
+
+</html>
