@@ -1,0 +1,10 @@
+Yuqing Wu
+SoftDev pd2
+K18 -- CSS basics
+2021-11-22
+
+- Each html tag seems to only be able to have one class and one id.
+- CSS can select the name of a tag and apply the properties to those tags in html.
+- I'm a bit confused about the relative position and what exactly is it relative to.
+- Why doesn't link have an </link> tag?
+- We discovered how we can use ::before and ::after to insert contents into the html.
