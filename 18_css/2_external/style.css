@@ -1,31 +1,53 @@
+/*
+     Yuqing Wu
+     SoftDev pd2
+     K18 -- CSS basics
+     2021-11-22
+
+CSS style sheet
+*/
+/* set the fonts to arial*/
 .arial{
   font-family : "arial";
 }
 
+/*make text white*/
 #white-text{
   color:white;
 }
+
+/*different background colors*/
 #dimgray{
   background-color:dimgray;
 
 }
 #darkgray{
   background-color:darkgray;
+  /*height would determine how long into the page the background goes*/
     height:250px;
 }
+
+/* main heading*/
 .foo-head1{
   background-color:lightgray;
   color:white;
+  /*center text*/
   text-align:center;
 }
+
+/*list of links*/
 #no-bullet{
+  /*bullets are gone*/
   list-style: none;
+}
+/* for all link (<a>) tags*/
+a{
   color:white;
+  /* no underscore*/
   text-decoration: none;
 }
-.center{
-  text-align:center;
-}
+
+/*alignments*/
 .nav-foo{
   position:relative;
   left:40px;
@@ -42,6 +64,8 @@
   top:200px;
   color:darkgray;
 }
+
+/* putting new lines */
 .cp-right::before{
   content:"\a\a\a\a\a";
   white-space:pre;

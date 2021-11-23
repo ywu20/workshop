@@ -14,34 +14,49 @@
   </head>
 
   <style>
+
+  /* set the fonts to arial*/
   .arial{
     font-family : "arial";
   }
 
+  /*make text white*/
   #white-text{
     color:white;
   }
+
+  /*different background colors*/
   #dimgray{
     background-color:dimgray;
 
   }
   #darkgray{
     background-color:darkgray;
+    /*height would determine how long into the page the background goes*/
       height:250px;
   }
+
+  /* main heading*/
   .foo-head1{
     background-color:lightgray;
     color:white;
+    /*center text*/
     text-align:center;
   }
+
+  /*list of links*/
   #no-bullet{
+    /*bullets are gone*/
     list-style: none;
+  }
+  /* for all link (<a>) tags*/
+  a{
     color:white;
+    /* no underscore*/
     text-decoration: none;
   }
-  .center{
-    text-align:center;
-  }
+
+  /*alignments*/
   .nav-foo{
     position:relative;
     left:40px;
@@ -58,6 +73,8 @@
     top:200px;
     color:darkgray;
   }
+
+  /* putting new lines */
   .cp-right::before{
     content:"\a\a\a\a\a";
     white-space:pre;
@@ -70,13 +87,14 @@
     <h1 class = "foo-head1">foo heading 1</h1>
     <h3 class = "nav-foo">nav foo</h3>
     <ul id = "no-bullet">
-      <li><a href="" id = "no-bullet">dis</a></li>
-      <li><a href=""id = "no-bullet">dat</a></li>
-      <li><a href=""id = "no-bullet">de udda ting</a></li>
+      <li><a href="">dis</a></li>
+      <li><a href="">dat</a></li>
+      <li><a href="">de udda ting</a></li>
     </ul>
     <div class = "main-foo">
     <h2>main foo heading</h2>
     <p>tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk
+      <!---Lorem ipsum generator: https://loremipsum.io/--->
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
       <br>
