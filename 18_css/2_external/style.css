@@ -1,72 +1,60 @@
-/*
-     Yuqing Wu
-     SoftDev pd2
-     K18 -- CSS basics
-     2021-11-22
+/* Yea! -- Andrew Juang, Eliza Knapp, Yuqing Wu
+   SoftDev pd2
+   K18 -- CSS basics
+   2021-11-23 */
 
-CSS style sheet
-*/
-/* set the fonts to arial*/
-.arial{
-  font-family : "arial";
+.container {
+    font-family : "arial";
+    background-color:gray;
+    height:400px;
 }
 
-/*make text white*/
-#white-text{
-  color:white;
+.body {
+    position: absolute;
+    left:200px;
+    top:60px;
 }
 
-/*different background colors*/
+.footer {
+    position: relative;
+    float:right;
+    width:100%;
+    text-align:right;
+    padding:10px;
+    background-color:#606060;
+    color:gray;
+    top:200px;
+}
+
+h1 {
+    color: white;
+    background-color:
+    lightgray;
+    text-align: center;
+}
+
+h3 {
+    position: relative;
+    margin:10px
+}
+
+ul {
+    list-style: none;
+    margin:10px;
+    padding:0px;
+}
+
+li {
+    color:white;
+    text-decoration: none;
+}
+
 #dimgray{
-  background-color:dimgray;
-
-}
-#darkgray{
-  background-color:darkgray;
-  /*height would determine how long into the page the background goes*/
-    height:250px;
+    background-color:dimgray;
 }
 
-/* main heading*/
-.foo-head1{
-  background-color:lightgray;
-  color:white;
-  /*center text*/
-  text-align:center;
-}
-
-/*list of links*/
-#no-bullet{
-  /*bullets are gone*/
-  list-style: none;
-}
-/* for all link (<a>) tags*/
 a{
-  color:white;
-  /* no underscore*/
-  text-decoration: none;
-}
-
-/*alignments*/
-.nav-foo{
-  position:relative;
-  left:40px;
-}
-
-.main-foo{
-  position:absolute;
-  left:300px;
-  top:60px;
-}
-.cp-right{
-  position:absolute;
-  right:30px;
-  top:200px;
-  color:darkgray;
-}
-
-/* putting new lines */
-.cp-right::before{
-  content:"\a\a\a\a\a";
-  white-space:pre;
+    color:white;
+    /* no underscore*/
+    text-decoration: none;
 }

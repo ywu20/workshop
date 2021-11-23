@@ -1,111 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Yuqing Wu
-       SoftDev pd2
-       K18 -- CSS basics
-       2021-11-22
+<!-- Yea! -- Andrew Juang, Eliza Knapp, Yuqing Wu
+     SoftDev pd2
+     K18 -- CSS basics
+     2021-11-23
+-->
 
-	 WORK FILE for CSS
-    -->
-
-  <head>
+<head>
     <meta charset="utf-8"/>
     <title>foo title</title>
-  </head>
+</head>
 
-  <style>
+<style>
 
-  /* set the fonts to arial*/
-  .arial{
+.container {
     font-family : "arial";
-  }
+    background-color:gray;
+    height:400px;
+}
 
-  /*make text white*/
-  #white-text{
-    color:white;
-  }
+.body {
+    position: absolute;
+    left:200px;
+    top:60px;
+}
 
-  /*different background colors*/
-  #dimgray{
-    background-color:dimgray;
+.footer {
+    position: relative;
+    float:right;
+    width:100%;
+    text-align:right;
+    padding:10px;
+    background-color:#606060;
+    color:gray;
+    top:200px;
+}
 
-  }
-  #darkgray{
-    background-color:darkgray;
-    /*height would determine how long into the page the background goes*/
-      height:250px;
-  }
+h1 {
+    color: white;
+    background-color:
+    lightgray;
+    text-align: center;
+}
 
-  /* main heading*/
-  .foo-head1{
-    background-color:lightgray;
-    color:white;
-    /*center text*/
-    text-align:center;
-  }
+h3 {
+    position: relative;
+    margin:10px
+}
 
-  /*list of links*/
-  #no-bullet{
-    /*bullets are gone*/
+ul {
     list-style: none;
-  }
-  /* for all link (<a>) tags*/
-  a{
+    margin:10px;
+    padding:0px;
+}
+
+li {
+    color:white;
+    text-decoration: none;
+}
+
+#dimgray{
+        background-color:dimgray;
+
+}
+
+a{
     color:white;
     /* no underscore*/
     text-decoration: none;
-  }
+}
+</style>
 
-  /*alignments*/
-  .nav-foo{
-    position:relative;
-    left:40px;
-  }
+  <body id="dimgray">
+      <div class="container">
+          <h1>h1 foo</h1>
 
-  .main-foo{
-    position:absolute;
-    left:300px;
-    top:60px;
-  }
-  .cp-right{
-    position:absolute;
-    right:30px;
-    top:200px;
-    color:darkgray;
-  }
+          <h3>nav foo</h3>
+          <ul>
+              <li><a href="">dis</a></li>
+              <li><a href="">dat</a></li>
+              <li><a href="">de udda ting</a></li>
+          </ul>
+          <div class="body">
 
-  /* putting new lines */
-  .cp-right::before{
-    content:"\a\a\a\a\a";
-    white-space:pre;
-  }
-  </style>
-  <body id = "dimgray">
+              <h2>main foo heading</h2>
+              <p>Bacon ipsum dolor amet salami picanha swine, alcatra pork pork chop pastrami cupim beef short loin jowl chuck sirloin shank. Pork belly drumstick shank, cow ham hock chicken doner frankfurter andouille ball tip capicola tongue swine ribeye tail. Jowl ground round pork chop alcatra. Porchetta pork chop shank beef ribs biltong shoulder brisket. Pork belly jowl ham boudin, bresaola pork chop tongue kielbasa.</p>
+              <p>Shoulder t-bone pig swine kevin strip steak. Swine venison meatball pancetta pork belly jowl shank prosciutto drumstick sausage hamburger corned beef. Chislic meatloaf filet mignon bacon. Pork capicola prosciutto, ground round jowl fatback strip steak filet mignon rump pastrami brisket tail. Ham hock ribeye sirloin, ball tip fatback ground round rump tri-tip jowl meatloaf bacon burgdoggen bresaola. Landjaeger brisket hamburger pork chop filet mignon, turducken swine ham frankfurter. Ham meatloaf ham hock rump ribeye sausage.</p>
+              </p>
+          </div>
+          <div>
+              <p class="footer">Copyright &copy; 2021 Clyde "Thluffy" Sinclair</p>
+          </div>
+      </div>
 
-    <div class = "arial" >
-<div id = "darkgray">
-    <h1 class = "foo-head1">foo heading 1</h1>
-    <h3 class = "nav-foo">nav foo</h3>
-    <ul id = "no-bullet">
-      <li><a href="">dis</a></li>
-      <li><a href="">dat</a></li>
-      <li><a href="">de udda ting</a></li>
-    </ul>
-    <div class = "main-foo">
-    <h2>main foo heading</h2>
-    <p>tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk
-      <!---Lorem ipsum generator: https://loremipsum.io/--->
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-      <br>
-      <br>
-</div>
-</div>
-<div class = "cp-right">
-      Copyright &copy; 2021 Clyde "Thluffy" Sinclair
-    </div>
-
-</div>
   </body>
 
 </html>
