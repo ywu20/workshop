@@ -21,22 +21,24 @@ def main():
     r = urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key=' + API_KEY)
 
     JSON = r.read()
+    print(JSON)
 
     URL = json.loads(JSON)['url']
+    print("URL:" + URL)
 
 
-    """
+
     # -- Another way to do api with requests --
-    print("API_KEY: " + API_KEY + "\n")
-    r = requests.get('https://api.nasa.gov/planetary/apod?api_key=' + API_KEY)
+    #print("API_KEY: " + API_KEY + "\n")
+    #r = requests.get('https://api.nasa.gov/planetary/apod?api_key=' + API_KEY)
 
-    print("JSON:")
-    print(r.json())
+    #print("JSON:")
+    #print(r.json())
 
-    URL = r.json()['url']
-    print("\nURL: " + URL)
+    #URL = r.json()['url']
+    #print("\nURL: " + URL)
 
-    """
+
     return render_template('main.html',pic=URL)
 
 if __name__ == "__main__":
