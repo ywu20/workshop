@@ -1,0 +1,14 @@
+Penguins(Eliza Knapp, Yuqing Wu)
+SoftDev
+K23 -- No.2
+2021-12-01
+
+Comments to their code
+- nice comments
+
+
+Q1:
+- both have cards, blockquotes, nav bars and those stuff
+- The grid systems for foundation is easy to use and does auto resize
+- Callouts are kind of like menu bars
+- Blogs in Foundations
