@@ -3,12 +3,18 @@ SoftDev
 K23 -- No.2
 2021-12-01
 
-Comments to their code
-- nice comments
+Looked at Yoonah and Josephine's team Ducks' site
 
+Q0:
+We did not have to consult outside resources as we just looked at their
+source codes. Their source codes have some comments that explain things.
 
 Q1:
-- both have cards, blockquotes, nav bars and those stuff
-- The grid systems for foundation is easy to use and does auto resize
-- Callouts are kind of like menu bars
-- Blogs in Foundations
+- Both Bootstrap and Foundation have cards, blockquotes, nav bars and those
+  are pretty similar
+- The grid systems for foundation is easy to use. I actually found the
+  idea of having x y z grid easier than the Bootstrap flex boxes.
+- I like how Bootstrap looks more than Foundation
+- Maybe it's because I didn't have to read the documentation for Foundation,
+  I found it slightly easier to use.
+- I would slightly prefer Foundation
