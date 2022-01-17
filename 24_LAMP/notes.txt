@@ -1,0 +1,5 @@
+- Need to set up key authentication on local machine
+- You should NOT be able to ssh from the outside as root, instead create a user account with sudo perms
+- sudo hostnamectl set-hostname <new-name> -- rename a droplet
+- I finally learned how to use scp to copy local files onto ssh virtual machines. scp /path/on/local/computer ssh_user@ip:/path/
+- adduser can add a user account. passwd <username> would set password for the user.
