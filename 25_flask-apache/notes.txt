@@ -1,0 +1,11 @@
+Useful commands for debugging:
+systemctl status apache2.service
+journalctl -xe
+The error log is here: /var/log/apache2/error.log
+
+Should update the packages before doing things.
+Can run on localhost (<ip>:5000) if you add host='0.0.0.0' in app.run() and ufw allow 5000
+
+The service apache2 restart command needs to be used everytime we change something.
+a2ensite FlaskApp whenever another app is served.
+Need to name the file we want to run __init__.py
