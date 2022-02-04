@@ -1,7 +1,7 @@
 // Team Odin :: Yuqing Wu, Rachel Xiao
 // SoftDev pd2
 // K27 -- Basic functions in JavaScript
-// 2022-02-03
+// 2022-02-04
 // --------------------------------------------------
 
 
