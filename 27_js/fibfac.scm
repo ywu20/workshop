@@ -1,9 +1,13 @@
-;; The first three lines of this file were inserted by DrRacket. They record metadata
-;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-beginner-reader.ss" "lang")((modname fibfac) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
-;the function named fact (for factorial) is a procedure (lambda) that takes in a parameter
-; if n is less than or equal to 1, the function should return 1
-; if not, the function should return the value of n times the factorial of the preceding number
+; Team Odin: Rachel Xiao, Yuqing Wu
+; SoftDev
+; K27 -- Where Does JS Live?
+; 2022-02-04
+; time spent: 0.5 hours
+
+; Factorial
+; The function nis a procedure (lambda) that takes in a parameter n
+; If n is less than or equal to 1, the function should return 1
+; If not, the function should return the value of n times the factorial of the preceding number
 
 (define fact
   (lambda (n)
@@ -20,6 +24,8 @@
 (fact 10)
 
 
+; Fibonacci sequence
+; Each number in the sequence is the sum of the two preceding ones with the first two numbers being 0 and 1
 
 (define fib
   (lambda (n)
