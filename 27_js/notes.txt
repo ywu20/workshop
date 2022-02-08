@@ -1,0 +1,31 @@
+Team Odin :: Rachel Xiao, Yuqing Wu
+SoftDev pd2
+K27 -- Basic functions in JavaScript
+2022-02-04
+
+DISCO
+-----------------------------------------------------------------
+* var fxnName = function(args) {
+	body;
+  };
+* var fxnName = (args) => {
+	body;
+  };
+* There is apparently a third way we didn't go over
+  function fxnName(args) {
+  	body;
+  }
+* JS looks like Java. Uses // for comments, semicolons, and {} 
+  for body
+* uses var to create variables but we don't need to declare a
+  type.
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* How does the dev console run the JS?
+* Can we only run JS on the browser? Can we do it on the terminal?
+* Why does JS have two ways of making functions?
+* What does the => mean in creating a function?
+* How can we call JS functions from a separate file in HTML?
+=================================================================

@@ -37,11 +37,11 @@ with open('courses.csv') as courses:
         c.execute(command, (i['code'], i['mark'],i['id']))    # run SQL statement
 
 
-command = "SELECT * FROM students"
-c.execute(command)
+#command = "SELECT * FROM students"
+#c.execute(command)
 #c.execute("SELECT * FROM courses")
-a= c.fetchall() # it's a list
-print(a)
+#a= c.fetchall() # gets table to python. it's a list. Would be empty if didn't have select from before. 
+#print(a)
 #==========================================================
 
 db.commit() #save changes
