@@ -1,24 +1,24 @@
 /*
    your PPTASK:
-   
+
    Test drive each bit of code in this file,
     and insert comments galore, indicating anything
      you discover,
     	have questions about,
     		or otherwise deem notable.
-    		
+
     		Write with your future self or teammates in mind.
-    		
-    		If you find yourself falling out of flow mode, consult 
+
+    		If you find yourself falling out of flow mode, consult
     		other teams
     		MDN
 
    A few comments have been pre-filled for you...
-   
+
    (delete this block comment once you are done)
 */
 
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
+// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
 // SoftDev pd0
 // K28 -- Getting more comfortable with the dev console and the DOM
 // 2022-02-08t
@@ -50,21 +50,23 @@ var o = { 'name' : 'Thluffy',
           }
         };
 
-
+// appends an item to the end of the list
 var addItem = function(text) {
   var list = document.getElementById("thelist");
   var newitem = document.createElement("li");
   newitem.innerHTML = text;
+  console.log(newitem)
   list.appendChild(newitem);
 };
 
-
+// remove the nth item of the list, everything else move up
 var removeItem = function(n) {
   var listitems = document.getElementsByTagName('li');
+  console.log(listitems);
   listitems[n].remove();
 };
 
-
+// Turns first and last element of list red
 var red = function() {
   var items = document.getElementsByTagName("li");
   for(var i = 0; i < items.length; i++) {
@@ -72,7 +74,7 @@ var red = function() {
   }
 };
 
-
+// Turns everything blue except the first is red
 var stripe = function() {
   var items = document.getElementsByTagName("li");
   for(var i = 0; i < items.length; i++) {
@@ -86,5 +88,42 @@ var stripe = function() {
 
 //insert your implementations here for...
 // FIB
+
+var fib = (n) =>{
+  if (n<=1){
+   return n;
+  }else{
+   return fib(n-1) +  fib(n-2);
+  }
+};
+
 // FAC
+
+var fact = (n) =>{
+  if (n<=1){
+   return 1;
+  }else{
+   return fact(n-1) *  n;
+  }
+};
+
 // GCD
+
+var gcd = function(a,b){
+  var divisor = a;
+  var dividend = b;
+  if(a>b){
+    dividend = a;
+    divisor = b;
+  }
+  while(divisor != 0){
+    var rem = dividend % divisor;
+    dividend = divisor;
+    divisor = rem;
+  }
+  return dividend;
+}
+
+addItem("fib(10): "+fib(10));
+addItem("fact(5): "+fact(5));
+addItem("gcd (36,10): "+gcd(36,10));
