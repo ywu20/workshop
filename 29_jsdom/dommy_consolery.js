@@ -1,7 +1,7 @@
-// Team Odin :: Yuqing Wu, Rachel Xiao
+// Team Random Word Generator :: Yuqing Wu, Jonathan Wu
 // SoftDev pd2
-// K28 -- Manipulating the DOM
-// 2022-02-08t
+// K29 -- DOMfoolery++
+// 2022-02-10
 // --------------------------------------------------
 
 

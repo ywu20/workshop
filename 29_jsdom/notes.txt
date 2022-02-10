@@ -1,0 +1,4 @@
+Team Random Word Generator :: Yuqing Wu, Jonathan Wu
+SoftDev pd2
+K29 -- DOMfoolery++
+2022-02-10
