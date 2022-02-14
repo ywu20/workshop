@@ -11,9 +11,10 @@ var toggleMode = (e) => {
 }
 
 var drawRect = function(e) {
-  var mouseX = e.clientX;
-  var mouseY = e.clientY;
+  var mouseX = e.offsetX;
+  var mouseY = e.offsetY;
   console.log("mouseClick registered at ", mouseX, mouseY);
+  console.log("offsetX,y ", e.offsetX, e.offsetY);
   ctx.fillStyle = "red";
   ctx.fillRect(mouseX, mouseY, 100, 200);
 }
