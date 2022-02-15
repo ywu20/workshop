@@ -1,14 +1,26 @@
+// Team Odin :: Yuqing Wu, Rachel Xiao
+// SoftDev pd2
+// K30 -- JS Draw with Canvas
+// 2022-02-14m
+
+//retrieve node in DOM via ID
 var c = document.getElementById("slate");
+
+//instatiate a CanvasRenderingContext2D object
 var ctx = c.getContext("2d");
+
+//init global state var
 var mode = "rect";
 
 var toggleMode = (e) => {
-  console.log("toggling..." + mode);
+  console.log("toggling...");
   if (mode == "rect") {
     mode = "circle";
-  }else{
+  }
+  else {
     mode = "rect";
   }
+  console.log(mode);
 }
 
 var drawRect = function(e) {
@@ -19,7 +31,7 @@ var drawRect = function(e) {
   ctx.fillRect(mouseX, mouseY, 100, 200);
 }
 
-var drawCircle = function(e){
+var drawCircle = function(e) {
   var mouseX = e.offsetX;
   var mouseY = e.offsetY;
   console.log("mouseClick registered at ", mouseX, mouseY);
@@ -29,22 +41,35 @@ var drawCircle = function(e){
   ctx.fill();
 }
 
-var draw = function(e){
-  if (mode == "rect"){
+var draw = function(e) {
+  if (mode == "rect") {
     drawRect(e);
-  }else{
+  }
+  else {
     drawCircle(e);
   }
+  console.log("drew shape");
 }
 
-var wipeCanvas = function(){
-  ctx.clearRect(0,0,c.clientHeight,c.clientWidth);
+//var wipeCanvas = () => {}
+var wipeCanvas = function() {
+  ctx.clearRect(0, 0, c.clientWidth, c.clientHeight);
+  console.log("wiped");
 }
-
-var clearB = document.getElementById("buttonClear");
-clearB.addEventListener('click',wipeCanvas);
-
-var bToggler = document.getElementById("buttonToggle");
-bToggler.addEventListener('click', toggleMode);
 
 c.addEventListener('click', draw);
+
+var bToggler = document.getElementById("buttonToggle"); //rect|circ button
+bToggler.addEventListener('click', function() {
+                                    toggleMode();
+                                    if (mode == "rect") {
+                                      bToggler.innerHTML = "Rectangle";
+                                    }
+                                    else {
+                                      bToggler.innerHTML = "Circle";
+                                    }
+                                  }
+                         ); //switch between rectange and circle
+
+var clearB = document.getElementById("buttonClear"); //wipe button
+clearB.addEventListener('click', wipeCanvas); //doesn't need () because just fxnName
