@@ -20,7 +20,7 @@ var ctx = c.getContext('2d');
 ctx.fillStyle = "blue"; // YOUR CODE HERE
 
 var requestID;  //init global var for use with animation frames
-var timestamp = 10;
+
 
 //var clear = function(e) {
 var clear = (e) => {
@@ -36,17 +36,29 @@ var growing = true;
 
 //var drawDot = function() {
 var drawDot = () => {
+  ctx.clearRect(0, 0, c.clientWidth, c.clientHeight);
   console.log("drawDot invoked...")
   var mouseX = 250;
   var mouseY = 250;
   console.log("mouseClick registered at ", mouseX, mouseY);
   ctx.strokeStyle = "black";
   ctx.beginPath();
-  ctx.arc(mouseX, mouseY, timestamp, 0, 2*Math.PI);
+  ctx.arc(mouseX, mouseY, radius, 0, 2*Math.PI);
   ctx.fill();
   ctx.stroke();
-  timestamp += 1;
-  window.requestAnimationFrame(drawDot);
+  if(radius == Math.min(c.clientHeight, c.clientWidth)/2){
+    growing = false;
+  }
+  if(radius == 0){
+    growing = true;
+  }
+  if(growing){
+  radius += 1;
+  }
+  else {
+    radius -=1;
+  }
+  requestID = window.requestAnimationFrame(drawDot);
   /*
     ...to
     Wipe the canvas,
