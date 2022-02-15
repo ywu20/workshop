@@ -25,7 +25,7 @@ var requestID;  //init global var for use with animation frames
 //var clear = function(e) {
 var clear = (e) => {
   console.log("clear invoked...")
-
+  ctx.clearRect(0, 0, c.clientWidth, c.clientHeight);
   // YOUR CODE HERE
 };
 
@@ -53,7 +53,7 @@ var drawDot = () => {
     growing = true;
   }
   if(growing){
-  radius += 1;
+  radius += 1; // this causes repeated clicks to speed up
   }
   else {
     radius -=1;
@@ -76,7 +76,7 @@ var drawDot = () => {
 var stopIt = () => {
   console.log("stopIt invoked...")
   console.log( requestID );
-
+  window.cancelAnimationFrame(requestID);
   // YOUR CODE HERE
   /*
     ...to
