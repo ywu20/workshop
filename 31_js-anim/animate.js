@@ -17,7 +17,7 @@ var stopButton = document.getElementById('buttonStop');
 var ctx = c.getContext('2d');
 
 //set fill color to team color
-ctx.fillStyle = "blue"; // YOUR CODE HERE
+ctx.fillStyle = "skyblue";
 
 var requestID;  //init global var for use with animation frames
 
@@ -25,8 +25,7 @@ var requestID;  //init global var for use with animation frames
 //var clear = function(e) {
 var clear = (e) => {
   console.log("clear invoked...")
-  ctx.clearRect(0, 0, c.clientWidth, c.clientHeight);
-  // YOUR CODE HERE
+  ctx.clearRect(0, 0, c.clientWidth , c.clientHeight);
 };
 
 
@@ -36,29 +35,6 @@ var growing = true;
 
 //var drawDot = function() {
 var drawDot = () => {
-  ctx.clearRect(0, 0, c.clientWidth, c.clientHeight);
-  console.log("drawDot invoked...")
-  var mouseX = 250;
-  var mouseY = 250;
-  console.log("mouseClick registered at ", mouseX, mouseY);
-  ctx.strokeStyle = "black";
-  ctx.beginPath();
-  ctx.arc(mouseX, mouseY, radius, 0, 2*Math.PI);
-  ctx.fill();
-  ctx.stroke();
-  if(radius == Math.min(c.clientHeight, c.clientWidth)/2){
-    growing = false;
-  }
-  if(radius == 0){
-    growing = true;
-  }
-  if(growing){
-  radius += 1; // this causes repeated clicks to speed up
-  }
-  else {
-    radius -=1;
-  }
-  requestID = window.requestAnimationFrame(drawDot);
   /*
     ...to
     Wipe the canvas,
@@ -69,21 +45,53 @@ var drawDot = () => {
     window.cancelAnimationFrame()
     window.requestAnimationFrame()
    */
+  clear(); //wipe canvas
+  stopIt(); //to propagate your animations, you must pop off existing frames from the stack
+            //cancelAnimationFrame first to make sure there is one animation frame running
+  console.log("drawDot invoked...")
+  //start drawing circle from the center
+  var mouseX = c.clientWidth / 2;
+  var mouseY = c.clientHeight / 2;
+  console.log("mouseClick registered at ", mouseX, mouseY);
+
+  //repaint circle
+  ctx.strokeStyle = "black";
+  ctx.beginPath();
+  ctx.arc(mouseX, mouseY, radius, 0, 2*Math.PI);
+  ctx.fill();
+  ctx.stroke();
+
+  //circle shouldn't be drawn outside of the bounds of the canvas
+  //circle will start getting smaller when it hits the edges
+  if (radius == Math.min(c.clientWidth, c.clientHeight) / 2) {
+    growing = false;
+  }
+  //circle will get bigger if it is at its smallest
+  if (radius == 0) {
+    growing = true;
+  }
+
+  if (growing) {
+    radius++;
+  } else {
+    radius--;
+  }
+
+  requestID = window.requestAnimationFrame(drawDot); //and provide a callback to continue animating
 };
 
 
 //var stopIt = function() {
 var stopIt = () => {
-  console.log("stopIt invoked...")
-  console.log( requestID );
-  window.cancelAnimationFrame(requestID);
-  // YOUR CODE HERE
   /*
     ...to
     Stop the animation
     You will need
     window.cancelAnimationFrame()
   */
+  console.log("stopIt invoked...")
+  console.log( requestID );
+  window.cancelAnimationFrame(requestID);
 };
 
 
