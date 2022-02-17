@@ -1,0 +1,10 @@
+Team Trig :: Yuqing Wu, Hebe Huang
+SoftDev pd2
+K32: More Moving Parts
+2022-02-17
+
+Image()
+IMAGE_OBJ.src
+CANVAS_CONTEXT.drawImage
+Math.random()
+Math.floor() …
