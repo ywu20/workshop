@@ -28,7 +28,8 @@ var clear = (e) => {
 
 var radius = 0;
 var growing = true;
-
+var dvdx = 0;
+var dvdy = 0;
 
 //var drawDot = function() {
 var drawDot = () => {
@@ -43,12 +44,13 @@ var drawDot = () => {
     window.requestAnimationFrame()
    */
   clear(); //wipe canvas
-  stopIt(requestID); //to propagate your animations, you must pop off existing frames from the stack
+  stopIt(); //to propagate your animations, you must pop off existing frames from the stack
             //cancelAnimationFrame first to make sure there is one animation frame running
   console.log("drawDot invoked...")
   //start drawing circle from the center
   var mouseX = c.clientWidth / 2;
-  var mouseY = c.clientHeight / 2;
+  var mouseY = c.clientvar dx = 0;
+  var dy = 0;Height / 2;
   console.log("mouseClick registered at ", mouseX, mouseY);
 
   //repaint circle
@@ -63,11 +65,13 @@ var drawDot = () => {
   if (radius == Math.min(c.clientWidth, c.clientHeight) / 2) {
     growing = false;
   }
-  //circle will get bigger if it is at its smallest
+  //circle will get bigvar dx = 0;
+  var dy = 0;ger if it is at its smallest
   if (radius == 0) {
     growing = true;
   }
-
+var dx = 0;
+  var dy = 0;
   if (growing) {
     radius++;
   } else {
@@ -79,7 +83,7 @@ var drawDot = () => {
 
 
 //var stopIt = function() {
-var stopIt = (requestID) => {
+var stopIt = () => {
   /*
     ...to
     Stop the animation
@@ -89,16 +93,15 @@ var stopIt = (requestID) => {
   console.log("stopIt invoked...")
   console.log( requestID );
   window.cancelAnimationFrame(requestID);
+  window.cancelAnimationFrame(requestID2);
 };
 
 var drawDVD = () => {
-  stopIt(requestID2);
+  stopIt();
   console.log("draw DVD ...");
-  var myImage = new Image(10, 20);
+  var myImage = new Image(100, 200);
   myImage.src = 'logo_dvd.jpg';
-  var dx = 0;
-  var dy = 0;
-  ctx.drawImage(myImage, dx,dy);
+  ctx.drawImage(myImage, dx,dy,200,100);
   requestID2 = window.requestAnimationFrame(drawDVD);
 }
 
