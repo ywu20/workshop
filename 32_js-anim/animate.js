@@ -105,6 +105,7 @@ var stopIt = () => {
 };
 
 var drawDVD = () => {
+  clear();
   stopIt();
   console.log("draw DVD ...");
   var myImage = new Image(dvdw, dvdh);
