@@ -105,20 +105,33 @@ var stopIt = () => {
 };
 
 var drawDVD = () => {
+  // repaint canvas
   clear();
   stopIt();
   console.log("draw DVD ...");
+
+  //create image object
   var myImage = new Image(dvdw, dvdh);
+
+  // location of image
   myImage.src = 'logo_dvd.jpg';
+
+  // direction change of the image's movement once it reaches the edge
   if(dvdx<=0 || dvdx >= c.clientWidth-dvdw){
     dx *= -1;
   }
   if(dvdy<=0 || dvdy >= c.clientHeight-dvdh){
     dy *= -1;
   }
+
+  // move image
   dvdx += dx;
   dvdy += dy;
+
+  // draw image on canvas
   ctx.drawImage(myImage, dvdx,dvdy,dvdw,dvdh);
+
+  // animate
   requestID2 = window.requestAnimationFrame(drawDVD);
 }
 
