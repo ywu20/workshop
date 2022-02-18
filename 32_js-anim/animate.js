@@ -28,8 +28,18 @@ var clear = (e) => {
 
 var radius = 0;
 var growing = true;
-var dvdx = 30;
-var dvdy = 50;
+
+// size of dvd picture
+var dvdh = 100;
+var dvdw = 200;
+
+// location to place the picture
+var dvdx = Math.floor(Math.random() * (c.clientWidth-dvdw));
+var dvdy = Math.floor(Math.random() * (c.clientHeight-dvdh));
+
+// direction change of the picture
+var dx = 1;
+var dy = 1;
 
 //var drawDot = function() {
 var drawDot = () => {
@@ -97,13 +107,17 @@ var stopIt = () => {
 var drawDVD = () => {
   stopIt();
   console.log("draw DVD ...");
-  var myImage = new Image(100, 200);
+  var myImage = new Image(dvdw, dvdh);
   myImage.src = 'logo_dvd.jpg';
-  //dvdx += dvdy;
-  //dvdy+=dvdx;
-  dvdx += 1;
-  dvdy +=1;
-  ctx.drawImage(myImage, dvdx,dvdy,200,100);
+  if(dvdx<=0 || dvdx >= c.clientWidth-dvdw){
+    dx *= -1;
+  }
+  if(dvdy<=0 || dvdy >= c.clientHeight-dvdh){
+    dy *= -1;
+  }
+  dvdx += dx;
+  dvdy += dy;
+  ctx.drawImage(myImage, dvdx,dvdy,dvdw,dvdh);
   requestID2 = window.requestAnimationFrame(drawDVD);
 }
 
