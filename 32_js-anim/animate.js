@@ -28,8 +28,8 @@ var clear = (e) => {
 
 var radius = 0;
 var growing = true;
-var dvdx = 0;
-var dvdy = 0;
+var dvdx = 30;
+var dvdy = 50;
 
 //var drawDot = function() {
 var drawDot = () => {
@@ -49,8 +49,7 @@ var drawDot = () => {
   console.log("drawDot invoked...")
   //start drawing circle from the center
   var mouseX = c.clientWidth / 2;
-  var mouseY = c.clientvar dx = 0;
-  var dy = 0;Height / 2;
+  var mouseY = c.clientHeight / 2;
   console.log("mouseClick registered at ", mouseX, mouseY);
 
   //repaint circle
@@ -66,12 +65,10 @@ var drawDot = () => {
     growing = false;
   }
   //circle will get bigvar dx = 0;
-  var dy = 0;ger if it is at its smallest
   if (radius == 0) {
     growing = true;
   }
-var dx = 0;
-  var dy = 0;
+
   if (growing) {
     radius++;
   } else {
@@ -92,6 +89,7 @@ var stopIt = () => {
   */
   console.log("stopIt invoked...")
   console.log( requestID );
+  console.log( requestID2 );
   window.cancelAnimationFrame(requestID);
   window.cancelAnimationFrame(requestID2);
 };
@@ -101,7 +99,11 @@ var drawDVD = () => {
   console.log("draw DVD ...");
   var myImage = new Image(100, 200);
   myImage.src = 'logo_dvd.jpg';
-  ctx.drawImage(myImage, dx,dy,200,100);
+  //dvdx += dvdy;
+  //dvdy+=dvdx;
+  dvdx += 1;
+  dvdy +=1;
+  ctx.drawImage(myImage, dvdx,dvdy,200,100);
   requestID2 = window.requestAnimationFrame(drawDVD);
 }
 
