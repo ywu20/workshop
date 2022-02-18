@@ -34,8 +34,7 @@ var dvdh = 100;
 var dvdw = 200;
 
 // location to place the picture
-var dvdx = Math.floor(Math.random() * (c.clientWidth-dvdw));
-var dvdy = Math.floor(Math.random() * (c.clientHeight-dvdh));
+var dvdx, dvdy; 
 
 // direction change of the picture
 var dx = 1;
@@ -136,5 +135,10 @@ var drawDVD = () => {
 }
 
 dotButton.addEventListener( "click", drawDot );
-stopButton.addEventListener( "click",  stopIt );
-movieButton.addEventListener("click", drawDVD);
+stopButton.addEventListener( "click",  stopIt);
+//movieButton.addEventListener("click", wrapper);
+movieButton.addEventListener("click", function(){
+  dvdx = Math.floor(Math.random() * (c.clientWidth-dvdw));
+  dvdy = Math.floor(Math.random() * (c.clientHeight-dvdh));
+  drawDVD();
+});
