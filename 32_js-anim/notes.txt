@@ -3,8 +3,13 @@ SoftDev pd2
 K32: More Moving Parts
 2022-02-17
 
-Image()
-IMAGE_OBJ.src
-CANVAS_CONTEXT.drawImage
+Image(width, height), constructs an Image object.
+IMAGE_OBJ.src, links to the location the of the image, ex. IMAGE_OBJ.src = 'logo_dvd.jpg';
+CANVAS_CONTEXT.drawImage (IMAGE_OBJ, xcor,ycor,width, height), draws image on specified location on canvas.
+
+These are used together to generate a random number
 Math.random()
-Math.floor() …
+Math.floor()
+ex. Math.floor(Math.random() * range);
+
+We need to subtract the height and width of the image when we determine the maximun x and y location the image can be because the coordinates start drawing at top left of image. 
