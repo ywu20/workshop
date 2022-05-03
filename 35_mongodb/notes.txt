@@ -1,0 +1,9 @@
+Yuqing Wu
+SoftDev
+K<35> -- Another DB Perspective
+2022-05-02
+
+- Mongo DB uses documents to store information, documents are formed with dictionary like structures.
+- Collections contian multiple documents.
+- Keys and values are called fields and values in Mongo DB.
+- Would we be using the in browser IDE provided by the course the whole time?
