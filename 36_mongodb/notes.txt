@@ -1,0 +1,20 @@
+Yuqing Wu
+SoftDev
+K<36> -- Another DB Perspective
+2022-05-03
+
+- BSON is faster and stored more easily than JSON.
+- How common is BSON used compared to JSON?
+- mongodump -- exports data in BSON.
+- mongoexport -- exports data in JSON.
+- mongorestore -- imports data in BSON.
+- mongoimport -- imports data in JSON.
+- We can search with JSON in the graphical user interface
+- show dbs -- show list of databases
+- use <db> -- go into a database
+- show collections -- show list of collections inside database
+- db.<collection>.find(<JSON>) -- search for database entries.
+- it (iterate), shows next 20 entries of database.
+- find returns a cursor, which is a pointer.
+- .count() -- count number of entries.
+- .pretty() -- show in more readable JSON format.
