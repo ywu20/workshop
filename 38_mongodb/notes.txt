@@ -1,0 +1,15 @@
+Yuqing Wu
+SoftDev
+K<38> -- Another DB Perspective
+2022-05-08
+
+- $lte: less than or equal to
+- $eq: equal to
+- $ne: not equal
+- $gt: greater than
+- $or, $and, $not
+
+Arrays:
+- $size, $all
+- $regex
+- $eleMatch : {field : matched attribute, ...}
