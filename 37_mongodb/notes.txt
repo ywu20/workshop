@@ -1,0 +1,17 @@
+Yuqing Wu
+SoftDev
+K<37> -- Another DB Perspective
+2022-05-08
+
+- Every document has _id field with unique value.
+- We can insert data in JSON format using insert to collection.
+- db.inspections.insert(<JSON>) would insert data in mongo shell.
+- We can insert arrays inside the fields of mongo db.
+- updateOne() updates the first.
+- updateMany() updates all of the matched elements.
+- $set sets value of a field / add field if it doesn't exist.
+- $push inserts field to a collection.
+- $inc increments field value.
+- deleteOne() deletes first.
+- deleteMany() deletes all of them.
+- db.collection.drop() to delete collection.
