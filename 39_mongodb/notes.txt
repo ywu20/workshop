@@ -1,0 +1,13 @@
+Yuqing Wu
+SoftDev
+K<39> -- Another DB Perspective
+2022-05-13
+
+- aggregate() -- advanced version of find()
+- sort() -- sorts data based on specified fields.
+- limit() -- limits number of results.
+- createIndex() -- create index in database that can be used to traverse.
+- Data modeling is a way to organize fields of a document.
+- updateOne() updates a field.
+- "upsert": true as one of the key value pair.
+  - update when matches and insert when there's no field.

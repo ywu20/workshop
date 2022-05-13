@@ -1,0 +1,8 @@
+Yuqing Wu
+SoftDev
+K<40> -- Another DB Perspective
+2022-05-13
+
+- Use Atlas Data Explorer to look at data and export.
+- Realm is for mobile or web app. Charts can be used to view data.
+- Compass contains all the information for database and can filter data. GUI for mongo.
